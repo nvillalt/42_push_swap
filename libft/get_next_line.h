@@ -6,7 +6,7 @@
 /*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:11:45 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 13:30:05 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/22 17:03:09 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@
 char	*get_next_line(int fd);
 
 /* AUXILIARY FUNCTIONS */
+void	*ft_calloc_gnl(size_t count, size_t size);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 char	*ft_strdup_gnl(char *src);
-//char	*ft_strchr(char *str, int c);
-int	ft_check_char(char *str, int c);
+size_t	ft_strlen_gnl(char *str);
+int		ft_check_char(char *str, int c);
 
 #endif

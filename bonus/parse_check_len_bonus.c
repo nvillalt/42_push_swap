@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_check_len.c    	                            :+:      :+:    :+:   */
+/*   parse_check_len_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 13:53:46 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/02 12:34:05 by nvillalt         ###   ########.fr       */
+/*   Created: 2023/12/22 16:14:03 by nvillalt          #+#    #+#             */
+/*   Updated: 2023/12/22 16:14:05 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 static int	skip_zero(char *params)
 {

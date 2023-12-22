@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_bonus.c                                       :+:      :+:    :+:   */
+/*   get_commands_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/22 12:05:15 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 17:43:26 by nvillalt         ###   ########.fr       */
+/*   Created: 2023/12/22 16:13:46 by nvillalt          #+#    #+#             */
+/*   Updated: 2023/12/22 17:52:13 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 #include <stdio.h>
-
-int	main(int argc, char **argv)
+char	*get_commands()
 {
-	t_data		*stack_a;
-	t_data		*stack_b;
-	char		*commands;
+	char	*str;
+	char	*join;
+	int		i;
 
-	stack_a = NULL;
-	stack_b = NULL;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
-	if (check_and_init(argc, argv, &stack_a))
-		get_commands(&commands);
-	free_stack(&stack_a);
-	return (0);
+	i = 0;
+	str = get_next_line(0);
+	while (str)
+	{
+		//ft_putstr(str);
+		join = ft_strjoin(join, str);
+		free(str);
+		str = get_next_line(0);
+	}
+	printf("%s", join);
+	system("leaks -q checker");
+	return ("hla");
 }

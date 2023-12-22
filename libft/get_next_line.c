@@ -6,14 +6,13 @@
 /*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:10:25 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 13:31:51 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/22 17:03:15 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "get_next_line.h"
 
-static char	*ft_free_saved(char *saved)
+char	*ft_free_saved(char *saved)
 {
 	char	*aux;
 	int		len;
@@ -30,7 +29,7 @@ static char	*ft_free_saved(char *saved)
 	return (aux);
 }
 
-static char	*ft_get_returned_line(char *saved)
+char	*ft_get_returned_line(char *saved)
 {
 	char	*final;
 	int		len;
@@ -42,7 +41,7 @@ static char	*ft_get_returned_line(char *saved)
 		len++;
 	if (saved[len] ==  '\n')
 		len++;
-	final = ft_calloc(sizeof(char), len + 1); 	
+	final = ft_calloc_gnl(sizeof(char), len + 1); 	
 	if (!final)
 		return (NULL);
 	len = 0;
@@ -56,12 +55,12 @@ static char	*ft_get_returned_line(char *saved)
 	return (final);
 }
 
-static char	*ft_read_fd(int fd, char *saved)
+char	*ft_read_fd(int fd, char *saved)
 {
 	char	*buffer; 
 	ssize_t	read_chars;
 
-	buffer = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
+	buffer = ft_calloc_gnl(sizeof(char), BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
 	read_chars = 1;

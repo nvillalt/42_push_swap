@@ -6,7 +6,7 @@
 /*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 13:24:09 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/19 10:52:51 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/22 17:57:59 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int	main(int argc, char **argv)
 	if (check_and_init(argc, argv, &stack_a))
 		sort_algorithm(&stack_a, &stack_b);
 	free_stack(&stack_a);
+	//system("leaks -q push_swap");
 	return (0);
 }

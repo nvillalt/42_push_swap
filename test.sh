@@ -7,5 +7,5 @@ do
 	./push_swap $ARG | wc -l
 	#./push_swap $ARG | ./checker_linux $ARG
 	./push_swap $ARG | ./checker_Mac $ARG
-	sleep .2
+	sleep 0.2
 done

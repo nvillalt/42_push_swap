@@ -6,7 +6,7 @@
 /*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:23:25 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 13:27:55 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/22 17:32:47 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr_fd(char *s, int fd);
+void		ft_putstr(char *s);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 long int	ft_atoi(const char *str);
 int			ft_isalnum(int c);
