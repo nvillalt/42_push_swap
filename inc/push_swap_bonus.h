@@ -6,7 +6,7 @@
 /*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 11:02:39 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/26 19:53:47 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/26 20:03:00 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ int		check_max(t_data **head);
 int		rep_stack(t_data **stack);
 
 // GET COMMANDS
-int		get_commands(char **join);
-char	**split_commands(char **join);
+char	**get_commands();
+//char	**split_commands(char **join);
 char	*gnl_bonus(int fd);
 
 // MOVEMENT FUNCTIONS
