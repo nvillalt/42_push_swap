@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:10:25 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 17:03:15 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/26 19:13:20 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,11 @@ char	*ft_read_fd(int fd, char *saved)
 char	*get_next_line(int fd)
 {
 	static char	*saved;
-	char		*final;
+	char	*final;
 
+	saved = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (free(saved), NULL);
+		return (NULL);
 	saved = ft_read_fd(fd, saved);
 	if (!saved)
 		return (NULL);

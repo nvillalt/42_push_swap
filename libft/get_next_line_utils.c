@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:36:41 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 17:02:58 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/26 13:01:21 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	*ft_strdup_gnl(char *src)
 		return (0);
 	while (src[i] != '\0')
 	{
-		s[i] = (char)src[i];
+		s[i] = src[i];
 		i++;
 	}
 	return (s);

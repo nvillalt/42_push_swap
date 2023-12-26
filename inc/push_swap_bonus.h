@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 11:02:39 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 17:51:17 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/26 19:53:47 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ int		check_max(t_data **head);
 int		rep_stack(t_data **stack);
 
 // GET COMMANDS
-char	*get_commands();
+int		get_commands(char **join);
+char	**split_commands(char **join);
+char	*gnl_bonus(int fd);
 
 // MOVEMENT FUNCTIONS
 void	swap_sasb(t_data **stack, int op);

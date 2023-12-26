@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+         #
+#    By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/11 11:15:22 by nvillalt          #+#    #+#              #
-#    Updated: 2023/12/22 16:45:51 by nvillalt         ###   ########.fr        #
+#    Updated: 2023/12/26 19:20:17 by nvillalt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ SRCS = main.c parse_init.c parse_utils.c print_list.c list_utils.c  \
 
 BONUS_SRCS = main_bonus.c parse_init_bonus.c list_utils_bonus.c list_utils_2_bonus.c \
 	movements_rr_bonus.c movements_sp_bonus.c parse_check_len_bonus.c parse_init_utils_bonus.c \
-	get_commands_bonus.c
+	get_commands_bonus.c execute_commands_bonus.c gnl_bonus.c
 
 OBJ_NAME = $(SRCS:%.c=%.o)
 
