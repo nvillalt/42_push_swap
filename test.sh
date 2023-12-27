@@ -5,7 +5,7 @@ do
 	ARG=$(seq -1000 1000 | sort -R | tail -n 500 | tr '\n' ' ')
 	#echo $ARG
 	./push_swap $ARG | wc -l
-	#./push_swap $ARG | ./checker_linux $ARG
-	./push_swap $ARG | ./checker_Mac $ARG
+	./push_swap $ARG | ./checker_linux $ARG
+	#./push_swap $ARG | ./checker_Mac $ARG
 	sleep 0.2
 done

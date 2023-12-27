@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movements_rr_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 11:21:26 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 14:56:42 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/27 11:17:40 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,42 +19,36 @@ void	init_stack(t_data **stack, t_data **aux)
 	(*aux)->back = *aux;
 }
 
-void	rotate_rarb(t_data **stack, int op)
+int	rotate_rarb(t_data **stack)
 {
 	if (*stack == NULL || stack == NULL)
-		return ;
+		return (0);
 	*stack = (*stack)->next;
-	if (op == 0)
-		write(1, "ra\n", 3);
-	else if (op == 1)
-		write(1, "rb\n", 3);
+	return (1);
 }
 
-void	rotate_rr(t_data **stack_a, t_data **stack_b)
+int	rotate_rr(t_data **stack_a, t_data **stack_b)
 {
 	if (!(*stack_a) || !(*stack_b) || !stack_a || !stack_b)
-		return ;
-	rotate_rarb(stack_a, 2);
-	rotate_rarb(stack_b, 2);
-	write(1, "rr\n", 3);
+		return (0);
+	rotate_rarb(stack_a);
+	rotate_rarb(stack_b);
+	return (1);
 }
 
-void	revrot_rrarrb(t_data **stack, int op)
+int	revrot_rrarrb(t_data **stack)
 {
 	if (stack == NULL || *stack == NULL)
-		return ;
+		return (0);
 	*stack = (*stack)->back;
-	if (op == 0)
-		write(1, "rra\n", 4);
-	else if (op == 1)
-		write(1, "rrb\n", 4);
+	return (1);
 }
 
-void	revrot_rrr(t_data **stack_a, t_data **stack_b)
+int	revrot_rrr(t_data **stack_a, t_data **stack_b)
 {
 	if (!(*stack_a) || !(*stack_b) || !stack_a || !stack_b)
-		return ;
-	revrot_rrarrb(stack_a, 2);
-	revrot_rrarrb(stack_b, 2);
-	write(1, "rrr\n", 4);
+		return (0);
+	revrot_rrarrb(stack_a);
+	revrot_rrarrb(stack_b);
+	return (1);
 }

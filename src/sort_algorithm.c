@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_algorithm.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 15:42:20 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/19 13:30:55 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/27 11:11:47 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	sort_algorithm(t_data **stack_a, t_data **stack_b)
 {

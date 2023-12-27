@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   movements_sp_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 16:13:58 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/22 16:14:00 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/27 11:17:49 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
-#include <stdio.h>
 
 static void	ft_swap(int	*a, int *b)
 {
@@ -22,28 +21,25 @@ static void	ft_swap(int	*a, int *b)
 	*b = temp;
 }
 
-void	swap_sasb(t_data **stack, int op)
+int	swap_sasb(t_data **stack)
 {
 	if (!(*stack) || !stack || (*stack)->next == NULL)
-		return ;
+		return (0);
 	ft_swap(&(*stack)->value, &(*stack)->next->value);
 	ft_swap(&(*stack)->index, &(*stack)->next->index);
-	if (op == 0)
-		write(1, "sa\n", 3);
-	else if (op == 1)
-		write(1, "sb\n", 3);
+	return (1);
 }
 
-void	swap_ss(t_data **stack_a, t_data **stack_b)
+int	swap_ss(t_data **stack_a, t_data **stack_b)
 {
 	if (!(*stack_a) || !(*stack_b) || !stack_a || !stack_b)
-		return ;
-	swap_sasb(stack_a, 2);
-	swap_sasb(stack_b, 2);
-	write(1, "ss\n", 3);
+		return (0);
+	swap_sasb(stack_a);
+	swap_sasb(stack_b);
+	return (1);
 }
 
-void	push_pa(t_data **stack_a, t_data **stack_b)
+int	push_pa(t_data **stack_a, t_data **stack_b)
 {
 	t_data	*aux;
 	t_data	*last;
@@ -66,10 +62,10 @@ void	push_pa(t_data **stack_a, t_data **stack_b)
 		stack_b = NULL;
 		*stack_a = aux;
 	}
-	write(1, "pa\n", 3);
+	return (1);
 }
 
-void	push_pb(t_data **stack_a, t_data **stack_b)
+int	push_pb(t_data **stack_a, t_data **stack_b)
 {
 	t_data	*aux;
 	t_data	*last;
@@ -79,7 +75,7 @@ void	push_pb(t_data **stack_a, t_data **stack_b)
 	last = list_last(stack_a);
 	last_b = list_last(stack_b);
 	if (!*stack_a || !stack_a)
-		return ;
+		return (0);
 	*stack_a = (*stack_a)->next;
 	if (!*stack_b || !stack_b)
 		init_stack(stack_b, &aux);
@@ -93,5 +89,5 @@ void	push_pb(t_data **stack_a, t_data **stack_b)
 	}
 	last->next = *stack_a;
 	(*stack_a)->back = last;
-	write(1, "pb\n", 3);
+	return (1);
 }

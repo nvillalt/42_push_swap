@@ -6,7 +6,7 @@
 /*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 11:02:39 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/26 20:03:00 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/27 11:16:50 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,18 @@ int		check_max(t_data **head);
 int		rep_stack(t_data **stack);
 
 // GET COMMANDS
-char	**get_commands();
-//char	**split_commands(char **join);
+int		get_commands(t_data **a, t_data **b);
 char	*gnl_bonus(int fd);
 
 // MOVEMENT FUNCTIONS
-void	swap_sasb(t_data **stack, int op);
-void	swap_ss(t_data **stack_a, t_data **stack_b);
-void	push_pa(t_data **stack_a, t_data **stack_b);
-void	push_pb(t_data **stack_a, t_data **stack_b);
-void	rotate_rarb(t_data **stack, int op);
-void	rotate_rr(t_data **stack_a, t_data **stack_b);
-void	revrot_rrarrb(t_data **stack, int op);
-void	revrot_rrr(t_data **stack_a, t_data **stack_b);
+int		swap_sasb(t_data **stack);
+int		swap_ss(t_data **stack_a, t_data **stack_b);
+int		push_pa(t_data **stack_a, t_data **stack_b);
+int		push_pb(t_data **stack_a, t_data **stack_b);
+int		rotate_rarb(t_data **stack);
+int		rotate_rr(t_data **stack_a, t_data **stack_b);
+int		revrot_rrarrb(t_data **stack);
+int		revrot_rrr(t_data **stack_a, t_data **stack_b);
 void	init_stack(t_data **stack_b, t_data **aux);
 
 #endif

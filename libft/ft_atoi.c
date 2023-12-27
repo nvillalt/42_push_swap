@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvillalt <nvillalt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nvillalt <nvillalt@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:26:12 by nvillalt          #+#    #+#             */
-/*   Updated: 2023/12/08 16:45:51 by nvillalt         ###   ########.fr       */
+/*   Updated: 2023/12/27 11:11:31 by nvillalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 long int	ft_atoi(const char *str)
