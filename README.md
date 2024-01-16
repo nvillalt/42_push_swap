@@ -21,7 +21,9 @@ Furthermore, parsing the arguments and choosing the correct algorithm, is a beas
 ### Bonus 
 In order to execute the bonus, we must parse not only the number input, but the commands input as well. It is important to properly manage memory not only while working with the stacks, but also with the received commands.
 To read from the standard input, we must use our previously coded get next line (make sure to bulletproof it or version it slightly, which is what I decided to do) in order to escape valgrind yelling at you for having leaks.
-The rest of it, is pretty standard. 
+Then, we ought to be careful and wait for commands. Even if our stack is ordered, we must not print OK until we have received a command from the user.
+
+That was my mistake and it's why my bonus part of push swap is not correct. 
 
 ### Testing
 This project can be tested by using the provided checker binary (part of the project's resources) and also by checking the [Push Swap Visualizer web](http://push-swap.site).
